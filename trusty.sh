@@ -2,6 +2,7 @@
 # Copyright (C) 2015 Wesley Tanaka
 # Creates a docker image for Ubuntu Trusty Tahr (14.04 LTS)
 # Useful, for example on i386 or i686 systems
+# Hosted at https://registry.hub.docker.com/u/wtanaka/trusty32/
 ROOTFSDIR=`mktemp -d`
 ROOTTAR=`mktemp /tmp/trusty-XXXXX-rootfs.tar.gz`
 sudo debootstrap trusty "$ROOTFSDIR"
