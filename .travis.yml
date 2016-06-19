@@ -8,3 +8,4 @@ script:
       docker build
       -t wtanaka/java8-oracle:`git describe --always | tr :A-Z -a-z`
       java8-oracle/
+  - bundle exec kitchen test couchdb

@@ -1,0 +1,17 @@
+driver:
+  name: docker
+  use_sudo: <% if ENV['TRAVIS'] then true else false end %>
+
+platforms:
+  - name: ubuntu-trusty-docker
+    driver_config:
+      use_cache: true
+      image: wtanaka/trusty32
+
+provisioner:
+  name: shell
+
+suites:
+  - name: couchdb
+    driver:
+      dockerfile: couchdb/Dockerfile
